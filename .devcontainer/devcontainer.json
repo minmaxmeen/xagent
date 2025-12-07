@@ -2,7 +2,9 @@
     "name": "XAgent Dev Container",
     "image": "mcr.microsoft.com/devcontainers/python:1-3.11",
     "runArgs": [
-        "--init"
+        "--init",
+        "--name",
+        "xagent-dev-container"
     ],
     "workspaceFolder": "/workspaces/xagent",
     "forwardPorts": [
