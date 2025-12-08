@@ -28,7 +28,7 @@ npm start
 
 ```bash
 docker build -t xagent-frontend ./frontend
-docker run -p 3000:3000 -e NEXT_PUBLIC_API_URL=http://host.docker.internal:8001 xagent-frontend
+docker run -p 3000:3000 xagent-frontend
 ```
 
 - Using docker-compose (from repo root):
@@ -38,5 +38,5 @@ docker-compose up --build frontend
 ```
 
 Notes:
-- The frontend reads the backend base URL from `NEXT_PUBLIC_API_URL`.
-- In development you can set `.env.local` in `frontend/` or export the env var before running.
+- The frontpage is static by default. Configure other pages or components to call the backend when required.
+- For runtime configuration, environment variables can still be passed to the container if you need them.
