@@ -11,6 +11,7 @@
         8001
     ],
     "postCreateCommand": "pip install --no-cache-dir -r requirements.txt",
+    "postStartCommand": "uvicorn app.main:app --host 0.0.0.0 --port 8001 --reload",
     "settings": {
         "python.formatting.provider": "black",
         "python.languageServer": "Pylance"
