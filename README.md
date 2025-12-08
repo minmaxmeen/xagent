@@ -22,13 +22,13 @@ curl -X POST -H "Content-Type: application/json" -d '{"text":"hi"}' http://local
 
 ## Dev Container
 
-- **Open in container:** In VS Code, choose "Remote-Containers: Open Folder in Container..." and open the repository root.
-- **What it sets up:** Uses the official Python devcontainer image, installs dependencies from `backend/requirements.txt`, and forwards port `8001`.
+- **Open backend in container:** In VS Code, choose "Remote-Containers: Open Folder in Container..." and open the `backend` folder (VS Code will automatically use `backend/.devcontainer/devcontainer.json`).
+- **What it sets up:** Uses the official Python devcontainer image, runs `pip install --no-cache-dir -r requirements.txt` in the `backend` workspace, and forwards port `8001`.
 - **Run the backend locally in the container:**
 
 ```bash
-# from repository root inside the container
-uvicorn backend.app.main:app --host 0.0.0.0 --port 8001 --reload
+# from `backend` inside the container
+uvicorn app.main:app --host 0.0.0.0 --port 8001 --reload
 ```
 
 After starting, the backend will be reachable on the forwarded container port (host `localhost:8001`).
