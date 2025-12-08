@@ -32,3 +32,16 @@ uvicorn backend.app.main:app --host 0.0.0.0 --port 8001 --reload
 ```
 
 After starting, the backend will be reachable on the forwarded container port (host `localhost:8001`).
+
+### Frontend Dev Container
+
+- **Open frontend in container:** In VS Code, choose "Remote-Containers: Open Folder in Container..." and open the `frontend` folder (VS Code will automatically use `frontend/.devcontainer/devcontainer.json`).
+- **What it sets up:** Uses the official Node.js devcontainer image, runs `npm install` in the `frontend` workspace, and forwards port `3000` for Next.js.
+- **Run the frontend locally in the container:**
+
+```bash
+# from `frontend` inside the container
+npm run dev
+```
+
+After starting, the frontend will be reachable on the forwarded container port (host `localhost:3000`).
