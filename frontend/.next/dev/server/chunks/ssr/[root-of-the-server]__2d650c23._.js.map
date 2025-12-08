@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///workspaces/xagent/frontend/pages/index.js"],"sourcesContent":["export default function Home() {\n  return (\n    <main style={{ fontFamily: 'sans-serif', padding: 24 }}>\n      <h1>XAgent Frontend (Next.js)</h1>\n    </main>\n  )\n}\n"],"names":[],"mappings":";;;;;;AAAe,SAAS;IACtB,qBACE,qKAAC;QAAK,OAAO;YAAE,YAAY;YAAc,SAAS;QAAG;kBACnD,cAAA,qKAAC;sBAAG;;;;;;;;;;;AAGV"}}]
-}
